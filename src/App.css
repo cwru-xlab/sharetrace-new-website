@@ -67,3 +67,44 @@ input[type="text"]::placeholder{
   color: black;
   text-decoration: underline;
 }
+
+.signup-modal-title{
+  color:#478A83;
+  font-family: Nunito, Arial, Helvetica, sans-serif;
+  font-stretch: condensed !important;
+  font-weight: 900 !important;
+  font-size: 36px;
+  margin-bottom: 24px;
+}
+
+.form-input{
+  border-radius: 35px !important;
+  height: 32px;
+  width: 95%;
+}
+
+select{
+  border-radius: 35px !important;
+  height: 40px;
+  width: 95%;
+  color:#b1b1b1 !important;
+  border-color: #ced4da ;
+  padding-left: 5% !important;
+  font-style: italic;
+}
+
+.form-label{
+  color: #acacac;
+  font-family: Nunito, Arial, Helvetica, sans-serif;
+  margin-left: 2%;
+}
+
+.verifycode-style{
+  border-radius: 50% !important;
+  border-color: #acacac;
+  border-width: 1px;
+  height: 100% !important;
+  width: 100% !important;
+  margin-top: 20px;
+}
+

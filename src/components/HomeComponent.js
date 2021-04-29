@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import {Button, Form, Row, Col, FormGroup, Input} from 'reactstrap';
-import {Link} from 'react-router-dom'
+import {Link} from 'react-router-dom';
 var config = require('../config');
 
 class Home extends Component{
