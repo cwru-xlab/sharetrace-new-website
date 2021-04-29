@@ -125,6 +125,7 @@ class Header extends Component{
         //     if(data.success === false) alert(data.msg);
         //     else
         //         this.toggleModalProjSelect();
+        //         this.toggleModalSignUp();
         // })
     }
 
@@ -405,6 +406,74 @@ class Header extends Component{
                                     </Form>
                                 </Collapse>
                             </Collapse>
+                        </Form>
+                    </ModalBody>
+                </Modal>
+                <Modal isOpen={this.state.isModalLoginOpen} toggle={this.toggleModalLogin}>
+                    <ModalHeader toggle={this.toggleModalLogin} />
+                    <ModalBody>
+                        <p style={{color:"#CE3E3E", fontStyle:"italic"}}>Looks like you already have an account! Please Sign in here.</p>
+                        <Form id="loginForm" onSubmit={this.handleLogin}>
+                            <h6 className="signup-modal-title" style={{fontSize:"20px"}}>Welcome Back!</h6>
+                            <Row>
+                                <Col xs={8}>
+                                    <FormGroup>
+                                        <Input type="text" id="email" className="form-input" name="email" value={this.state.email} placeholder="email" onChange={this.handleInputChange}/>
+                                    </FormGroup>
+                                </Col>
+                            </Row>
+                            <h6 className="signup-modal-title" style={{fontSize:"20px"}}>Please verify it's you by entering your date of birth OR the last four digits of your SSN.</h6>
+                            <Row>
+                                <Col xs={12}>
+                                    <FormGroup>
+                                        <Label htmlFor="birth" className="form-label">Birthday</Label>
+                                        <Row>
+                                            <Col xs={4}>
+                                                <select name="birthmonth" id="birthmonth" className="form-input" onChange={this.handleInputChange}>
+                                                    <option value ="Jan">Jan</option>
+                                                    <option value ="Feb">Feb</option>
+                                                    <option value ="Mar">Mar</option>
+                                                    <option value ="Apr">Apr</option>
+                                                    <option value ="May">May</option>
+                                                    <option value ="June">June</option>
+                                                    <option value ="July">July</option>
+                                                    <option value ="Aug">Aug</option>
+                                                    <option value ="Sep">Sep</option>
+                                                    <option value ="Oct">Oct</option>
+                                                    <option value ="Nov">Nov</option>
+                                                    <option value ="Dec">Dec</option>
+                                                </select>
+                                            </Col>
+                                            <Col xs={3}>
+                                                <Input type="text" id="birthday" className="form-input" name="birthday" value={this.state.birthday} placeholder="18" onChange={this.handleInputChange}/>
+                                            </Col>
+                                            <Col xs={5}>
+                                                <Input type="text" id="birthyear" className="form-input" name="birthyear" value={this.state.birthyear} placeholder="2021" onChange={this.handleInputChange}/>
+                                            </Col>
+                                        </Row>
+                                    </FormGroup>
+                                </Col>
+                            </Row>
+                            <Row>
+                                <Col xs={{size: 6}}>
+                                    <FormGroup>
+                                        <Label htmlFor="ssn" className="form-label">Social Security Number</Label>
+                                        <Row>
+                                            <Col xs={{size: 3}}>
+                                                <p style={{marginLeft:"20%", color:"#acacac"}}>***_**_ </p>
+                                            </Col>
+                                            <Col xs={6}>
+                                                <Input type="text" id="ssn" className="form-input" name="ssn" value={this.state.snn} placeholder="0123" style={{display:"inline-block"}} onChange={this.handleInputChange}/>
+                                            </Col>
+                                        </Row>
+                                    </FormGroup>
+                                </Col>
+                            </Row>
+                            <Row>
+                                <Col xs={12} md={6}>
+                                    <Button type="submit" value="submit" color="primary" style={{width: "100%", borderRadius:"35px", backgroundColor:"#478A83", fontFamily:"Nunito, Arial, Helvetica, sans-serif"}}>Verify</Button>
+                                </Col>
+                            </Row>
                         </Form>
                     </ModalBody>
                 </Modal>
