@@ -46,13 +46,13 @@ class Header extends Component{
                                 <NavLink href="#" style={{color: "white"}}>NEWS</NavLink>
                             </NavItem>
                             <NavItem>
-                                <NavLink href="#whitepaper" style={{color: "white"}}>WHITE PAPER</NavLink>
+                                <NavLink href="/home#whitepaper" style={{color: "white"}}>WHITE PAPER</NavLink>
                             </NavItem>
                             <NavItem>
                                 <NavLink href="/faq" style={{color: "white"}}>FAQ</NavLink>
                             </NavItem>
                             <NavItem>
-                                <NavLink href="#" style={{color: "white"}}>PRIVACY POLICY</NavLink>
+                                <NavLink href="/privacypolicy" style={{color: "white"}}>PRIVACY POLICY</NavLink>
                             </NavItem>
                         </Nav>
                         <Nav className="ml-auto" navbar>

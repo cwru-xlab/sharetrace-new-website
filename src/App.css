@@ -59,3 +59,11 @@ input[type="text"]::placeholder{
   text-decoration: underline;
 }
 
+.privacy-font-color {
+  color: #616161;
+}
+
+.privacy-a {
+  color: black;
+  text-decoration: underline;
+}

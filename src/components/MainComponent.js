@@ -4,6 +4,7 @@ import Header from './HeaderComponent';
 import Footer from './FooterComponent';
 import Home from './HomeComponent';
 import Faq from './FaqComponent';
+import Privacy from './PrivacypolicyComponent';
 
 const UsernameContext = React.createContext('');
 
@@ -29,6 +30,7 @@ class Main extends Component{
                     <Switch>
                         <Route exact path="/home" component={()=><Home history={this.props.history} location={this.props.location} username={this.state.username} authentication={this.state.authentication} onUsernameChange={this.onUsernameChange}/>} />
                         <Route exact path="/faq" component={() => <Faq />} />
+                        <Route exact path="/privacypolicy" component={() => <Privacy />} />
                         <Redirect to="/home" />
                     </Switch>
                     <Footer />
