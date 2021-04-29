@@ -33,7 +33,7 @@ class Header extends Component{
 
     render(){
         return(
-            <div>
+            <div style={{backgroundImage:"url(/assets/images/BG.jpg)", backgroundSize: 'cover', paddingBottom:"15px"}}>
                 <Navbar dark className="custom-header row" expand="lg">
                     <NavbarBrand href="/home" className="col-2 col-md-5">ShareTrace</NavbarBrand>
                     <NavbarToggler id="nav" onClick={this.toggleNav} />
@@ -46,10 +46,10 @@ class Header extends Component{
                                 <NavLink href="#" style={{color: "white"}}>NEWS</NavLink>
                             </NavItem>
                             <NavItem>
-                                <NavLink href="#" style={{color: "white"}}>WHITE PAPER</NavLink>
+                                <NavLink href="#whitepaper" style={{color: "white"}}>WHITE PAPER</NavLink>
                             </NavItem>
                             <NavItem>
-                                <NavLink href="#" style={{color: "white"}}>FAQ</NavLink>
+                                <NavLink href="/faq" style={{color: "white"}}>FAQ</NavLink>
                             </NavItem>
                             <NavItem>
                                 <NavLink href="#" style={{color: "white"}}>PRIVACY POLICY</NavLink>
