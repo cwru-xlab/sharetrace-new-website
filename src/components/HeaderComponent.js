@@ -9,7 +9,6 @@ class Header extends Component{
     constructor(props){
         super(props);
         this.state = {
-            username:'',
             firstname:'',
             lastname:'',
             email:'',
@@ -22,7 +21,7 @@ class Header extends Component{
             organization:'NA',
             verifycode:[],
             continue: false,
-            downloaded: true,
+            downloaded: false,
             downloadedlater: false,
             isNavOpen: false,
             isModalSignUpOpen: false,
@@ -131,6 +130,8 @@ class Header extends Component{
 
     handleLogin(event){
         event.preventDefault();
+        this.props.onUsernameChange(this.state.email, true);
+        this.toggleModalLogin();
     }
 
     handleSubmitCode(event){
@@ -162,19 +163,19 @@ class Header extends Component{
                     <Collapse isOpen={this.state.isNavOpen} navbar>
                         <Nav navbar className="col-7">
                             <NavItem>
-                                <NavLink href="/home" style={{color: "white"}}>HOME</NavLink>
+                                <Link className="nav-link" to="/home" style={{color: "white"}}>HOME</Link>
                             </NavItem>
                             <NavItem>
-                                <NavLink href="#" style={{color: "white"}}>NEWS</NavLink>
+                                <Link className="nav-link" to="#" style={{color: "white"}}>NEWS</Link>
                             </NavItem>
                             <NavItem>
-                                <NavLink href="/home#whitepaper" style={{color: "white"}}>WHITE PAPER</NavLink>
+                                <NavLink className="nav-link" href="/home#whitepaper" style={{color: "white"}}>WHITE PAPER</NavLink>
                             </NavItem>
                             <NavItem>
-                                <NavLink href="/faq" style={{color: "white"}}>FAQ</NavLink>
+                                <Link className="nav-link" to="/faq" style={{color: "white"}}>FAQ</Link>
                             </NavItem>
                             <NavItem>
-                                <NavLink href="/privacypolicy" style={{color: "white"}}>PRIVACY POLICY</NavLink>
+                                <Link className="nav-link" to="/privacypolicy" style={{color: "white"}}>PRIVACY POLICY</Link>
                             </NavItem>
                         </Nav>
                         <Nav className="ml-auto" navbar>
