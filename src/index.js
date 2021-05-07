@@ -6,9 +6,9 @@ import reportWebVitals from './reportWebVitals';
 import 'bootstrap/dist/css/bootstrap.css';
 import 'font-awesome/css/font-awesome.min.css';
 import 'bootstrap-social/bootstrap-social.css';
-import Amplify from "aws-amplify";
-import awsExports from "./aws-exports";
-Amplify.configure(awsExports);
+// import Amplify from "aws-amplify";
+// import awsExports from "./aws-exports";
+// Amplify.configure(awsExports);
 
 ReactDOM.render(
   <React.StrictMode>
