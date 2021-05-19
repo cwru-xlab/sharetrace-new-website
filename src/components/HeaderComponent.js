@@ -99,8 +99,6 @@ class Header extends Component{
 
     handleSignup(event){
         event.preventDefault();
-        this.toggleModalProjSelect();
-        this.toggleModalSignUp();
         // let databody = {
         //     "firstname": this.state.firstname,
         //     "lastname": this.state.lastname,
@@ -120,22 +118,61 @@ class Header extends Component{
         // })
         // .then(res => res.json())
         // .then(data => {
-        //     this.props.onUsernameChange(data.username, data.authentication);
         //     if(data.success === false) alert(data.msg);
-        //     else
+        //     else{
         //         this.toggleModalProjSelect();
+        //         this.toggleModalLogin();
         //         this.toggleModalSignUp();
+        //     }
         // })
     }
 
     handleLogin(event){
         event.preventDefault();
-        this.props.onUsernameChange(this.state.email, true);
-        this.toggleModalLogin();
+        // let databody = {
+        //     "email": this.state.email,
+        //     "birthmonth": this.state.birthmonth,
+        //     "birthday": this.state.birthday,
+        //     "birthyear": this.state.birthyear,
+        //     "ssn": this.state.ssn
+        // }
+        // fetch(config.serverUrl+'/users/login', {
+        //     method: 'POST',
+        //     body: JSON.stringify(databody),
+        //     headers: {
+        //         'Content-Type': 'application/json',
+        //     },
+        // })
+        // .then(res => res.json())
+        // .then(data => {
+        //     if(data.success === false) alert(data.msg);
+        //     else{
+        //         this.props.onUsernameChange(this.state.email, data.token);
+        //         this.toggleModalLogin();
+        //     }
+        // })
     }
 
     handleSubmitCode(event){
         event.preventDefault();
+        // let databody = {
+        //     "verifycode": this.state.verifycode
+        // }
+        // fetch(config.serverUrl+'/verifycode', {
+        //     method: 'POST',
+        //     body: JSON.stringify(databody),
+        //     headers: {
+        //         'Content-Type': 'application/json',
+        //     },
+        // })
+        // .then(res => res.json())
+        // .then(data => {
+        //     if(data.success === false) alert(data.msg);
+        //     else{
+        //         alert("Verified!");
+        //         this.toggleModalDownload();
+        //     }
+        // })
     }
 
     render(){

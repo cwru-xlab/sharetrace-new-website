@@ -26,7 +26,22 @@ class Home extends Component{
 
     handleSubmit(event){
         event.preventDefault();
-        
+        // let databody = {
+        //     "email": this.state.email
+        // }
+        // fetch(config.serverUrl+'/subsription', {
+        //     method: 'POST',
+        //     body: JSON.stringify(databody),
+        //     headers: {
+        //         'Content-Type': 'application/json',
+        //     },
+        // })
+        // .then(res => res.json())
+        // .then(data => {
+        //     if(data.success === false) alert(data.msg);
+        //     else
+        //         alert("Successful subscription!");
+        // })
     }
 
     render(){
